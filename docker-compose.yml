@@ -1,0 +1,11 @@
+services:
+  backend:
+    build: ./backend
+    ports: ["8000:8000"]
+  postgres:
+    image: postgis/postgis:16-3.4
+    environment:
+      POSTGRES_DB: ercore
+      POSTGRES_USER: ercore
+      POSTGRES_PASSWORD: ercore_demo
+    ports: ["5432:5432"]
